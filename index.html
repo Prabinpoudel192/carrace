@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrace.css">
+    <title>Online Car racing Game</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <marquee id="marquee">This game was designed by stan smith </marquee>
+<div id="main">
+    <div id="loading"></div>
+    <div id="probar"></div>
+    <button id="button" >Start Game</button>
+</div>
+ <!-- insert your audio here -->
+ <audio src="gaali.mp3" id="audio"></audio>
+<script>
+    $(document).ready(function(){
+     $('#button').click(function(){
+        $('#loading').css({
+         'display':'block',
+        });
+$("#probar").animate({
+    "width":"340px",
+},7000);
+$("#button").css({
+    'display':'none',
+});
+function player(){
+    let msg=document.getElementById("audio");
+    msg.play();
+}
+setTimeout(player,7000);
+     });
+    
+
+
+    });
+</script>
+</body>
+</html>
